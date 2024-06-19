@@ -1,0 +1,4 @@
+/node_modules
+/storage/*
+!/storage/.gitignore
+debug_full_page.png

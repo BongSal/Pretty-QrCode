@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>QR Code Styling</title>
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/qr-code-styling@1.5.0/lib/qr-code-styling.js"
+    ></script>
+  </head>
+  <body>
+    <div id="canvas"></div>
+    <script type="text/javascript">
+      window.onload = () => {
+        window.qrCode = new QRCodeStyling({
+          type: "svg",
+          width: 300,
+          height: 300,
+          data: "https://qr-code-styling.com",
+          image: "",
+          margin: 0,
+          qrOptions: {
+            typeNumber: "0",
+            mode: "Byte",
+            errorCorrectionLevel: "Q",
+          },
+          imageOptions: { hideBackgroundDots: true, imageSize: 0.3, margin: 4 },
+          dotsOptions: {
+            type: "rounded",
+            color: "#0287cb",
+            gradient: {
+              type: "linear",
+              rotation: 0,
+              colorStops: [
+                { offset: 0, color: "#2f2f41" },
+                { offset: 1, color: "#406d66" },
+              ],
+            },
+          },
+          backgroundOptions: { color: "#ffffff" },
+          dotsOptionsHelper: {
+            colorType: { single: true, gradient: false },
+            gradient: {
+              linear: true,
+              radial: false,
+              color1: "#6a1a4c",
+              color2: "#6a1a4c",
+              rotation: "0",
+            },
+          },
+          cornersSquareOptions: {
+            type: "extra-rounded",
+            color: "#0287cb",
+            gradient: {
+              type: "linear",
+              rotation: 0,
+              colorStops: [
+                { offset: 0, color: "#2f2f41" },
+                { offset: 1, color: "#406d66" },
+              ],
+            },
+          },
+          cornersSquareOptionsHelper: {
+            colorType: { single: true, gradient: false },
+            gradient: {
+              linear: true,
+              radial: false,
+              color1: "#000000",
+              color2: "#000000",
+              rotation: "0",
+            },
+          },
+          cornersDotOptions: { type: "", color: "#364044" },
+          cornersDotOptionsHelper: {
+            colorType: { single: true, gradient: false },
+            gradient: {
+              linear: true,
+              radial: false,
+              color1: "#000000",
+              color2: "#000000",
+              rotation: "0",
+            },
+          },
+          backgroundOptionsHelper: {
+            colorType: { single: true, gradient: false },
+            gradient: {
+              linear: true,
+              radial: false,
+              color1: "#ffffff",
+              color2: "#ffffff",
+              rotation: "0",
+            },
+          },
+        });
+
+        window.qrCode.append(document.getElementById("canvas"));
+      };
+    </script>
+  </body>
+</html>
