@@ -8,7 +8,6 @@ router.get("/", async function (req, res) {
   const name = (Math.random() + 1).toString(36).substring(7);
   const outputPath = path.join(__dirname, `./../storage/images/${name}.svg`);
   const url = req.query.url;
-  console.log({ name: require("os").userInfo().username });
 
   try {
     const browser = await puppeteer.launch({
