@@ -2,3 +2,4 @@
 /storage/*
 !/storage/.gitignore
 debug_full_page.png
+.env
